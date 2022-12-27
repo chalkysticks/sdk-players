@@ -2,17 +2,11 @@ import { CollectionBase } from '@chalkysticks/sdk-core';
 import ModelPlayer from '../Model/Player';
 
 /**
- * ┌────────────────────────────────────────────────────────────────────────────┐
- * │                                                                            │
- * │ CollectionPlayer                                                           │
- * │                                                                            │
- * │ @namespace Collection                                                      │
- * │ @package   SDK-Player                                                      │
- * │ @project   ChalkySticks                                                    │
- * │                                                                            │
- * └────────────────────────────────────────────────────────────────────────────┘
+ * @class CollectionPlayer
+ * @package Collection
+ * @project ChalkySticks SDK Players
  */
-export default class CollectionPlayer extends CollectionBase {
+export default class CollectionPlayer extends CollectionBase<ModelPlayer> {
     /**
      * Endpoint key
      * e.g. https://api.chalkysticks.com/v1/player
@@ -26,5 +20,5 @@ export default class CollectionPlayer extends CollectionBase {
      *
      * @type ModelPlayer
      */
-    public model: any = ModelPlayer;
+    public model: ModelPlayer = new ModelPlayer();
 }

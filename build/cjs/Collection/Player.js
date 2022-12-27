@@ -6,7 +6,7 @@ class CollectionPlayer extends sdk_core_1.CollectionBase {
     constructor() {
         super(...arguments);
         this.endpoint = 'player';
-        this.model = Player_1.default;
+        this.model = new Player_1.default();
     }
 }
 exports.default = CollectionPlayer;

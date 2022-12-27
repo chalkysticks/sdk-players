@@ -1,15 +1,9 @@
 import { ModelBase } from '@chalkysticks/sdk-core';
 
 /**
- * ┌────────────────────────────────────────────────────────────────────────────┐
- * │                                                                            │
- * │ ModelPlayer                                                                │
- * │                                                                            │
- * │ @namespace Model                                                           │
- * │ @package   SDK-Player                                                      │
- * │ @project   ChalkySticks                                                    │
- * │                                                                            │
- * └────────────────────────────────────────────────────────────────────────────┘
+ * @class ModelPlayer
+ * @package Model
+ * @project ChalkySticks SDK Players
  */
 export default class ModelPlayer extends ModelBase {
     /**
@@ -38,5 +32,4 @@ export default class ModelPlayer extends ModelBase {
     // Not implemented
 
     // endregion: Getters
-
 }
