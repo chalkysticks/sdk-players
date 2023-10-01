@@ -21,7 +21,21 @@ export class Player extends Model.Base {
      */
     public fields: string[] = [
         'id',
+		'name',
         'created_at',
         'updated_at',
     ];
+
+	// region: Getters
+	// ---------------------------------------------------------------------------
+
+	/**
+	 * @return string
+	 */
+	public getName(): string {
+		return this.attr('name') as string;
+	}
+
+	// endregion: Getters
+
 }

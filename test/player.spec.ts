@@ -1,26 +1,15 @@
 import { expect } from 'chai';
-import ModelPlayer from '../src/Model/Player';
+import { Model } from '../src';
 
-// Setup
-// ----------------------------------------------------------------------------
-
-const model: ModelPlayer = new ModelPlayer({
+const model: Model.Player = new Model.Player({
     id: 1,
+	name: 'Matt Kenefick',
 });
 
-
-/**
-  ┌────────────────────────────────────────────────────────────────────────────┐
-  │                                                                            │
-  │ Local tests                                                                │
-  │                                                                            │
-  └────────────────────────────────────────────────────────────────────────────┘
-*/
-
 describe('Player - Local', () => {
-
     it('should have a name', () => {
-        expect(true).to.equal(true);
-    });
+		const name = model.getName();
 
+        expect(name).to.equal('Matt Kenefick');
+    });
 });
