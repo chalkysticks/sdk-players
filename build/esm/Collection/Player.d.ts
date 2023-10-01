@@ -1,6 +1,6 @@
-import { CollectionBase } from '@chalkysticks/sdk-core';
-import ModelPlayer from '../Model/Player';
-export default class CollectionPlayer extends CollectionBase<ModelPlayer> {
+import { Collection } from '@chalkysticks/sdk-core';
+import * as Model from '../Model';
+export default class Player extends Collection.Base<Model.Player> {
     endpoint: string;
-    model: ModelPlayer;
+    model: Model.Player;
 }

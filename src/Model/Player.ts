@@ -1,11 +1,11 @@
-import { ModelBase } from '@chalkysticks/sdk-core';
+import { Model } from '@chalkysticks/sdk-core';
 
 /**
- * @class ModelPlayer
+ * @class Player
  * @package Model
  * @project ChalkySticks SDK Players
  */
-export default class ModelPlayer extends ModelBase {
+export class Player extends Model.Base {
     /**
      * Endpoint key
      * e.g. https://api.chalkysticks.com/v3/player
@@ -24,12 +24,4 @@ export default class ModelPlayer extends ModelBase {
         'created_at',
         'updated_at',
     ];
-
-
-    // region: Getters
-    // ---------------------------------------------------------------------------
-
-    // Not implemented
-
-    // endregion: Getters
 }

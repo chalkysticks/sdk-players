@@ -1,5 +1,5 @@
-import { ModelBase } from '@chalkysticks/sdk-core';
-export default class ModelPlayer extends ModelBase {
+import { Model } from '@chalkysticks/sdk-core';
+export declare class Player extends Model.Base {
     endpoint: string;
     fields: string[];
 }
