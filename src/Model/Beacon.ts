@@ -42,14 +42,14 @@ export class Beacon extends Model.Base {
 	 * @return number
 	 */
 	public getLatitude(): number {
-		return parseFloat(this.attr('latitude') as string);
+		return parseFloat(this.attr('lat') as string);
 	}
 
 	/**
 	 * @return number
 	 */
 	public getLongitude(): number {
-		return parseFloat(this.attr('longitude') as string);
+		return parseFloat(this.attr('lon') as string);
 	}
 
 	/**
