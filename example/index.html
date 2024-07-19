@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ChalkySticks Player SDK Example</title>
+
+		<link rel="icon" href="https://static.chalkysticks.com/favicon.png" />
+
+		<style>
+			body {
+				background: #11110b;
+				color: #fffff1;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>ChalkySticks Player API</h1>
+			</header>
+		</main>
+
+		<!-- Script -->
+		<script>
+			window.env = {
+				app: {
+					// api_url: 'http://localhost:7202',
+					api_url: 'https://api.chalkysticks.com/v1',
+				},
+			};
+		</script>
+		<script type="module">
+			import * as ChalkySticksPlayers from '../build/web/chalkysticks-players.js';
+
+			console.log('ChalkySticks', ChalkySticksPlayers);
+
+			// const beaconCollection = new ChalkySticksPlayers.Collection.Beacon();
+			// beaconCollection.fetch();
+
+			const collection = await ChalkySticksPlayers.Collection.Beacon.search(40, -73, 9999);
+
+			console.log(collection);
+		</script>
+	</body>
+</html>
