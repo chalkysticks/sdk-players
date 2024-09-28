@@ -6,7 +6,7 @@ import { Constants } from '@chalkysticks/sdk-core';
  * @return Model.Player
  */
 export function model(): Model.Player {
-	return new Model.Player({
+	return new Model.Player(undefined, {
 		baseUrl: Constants.API_URL_V1,
 	});
 }

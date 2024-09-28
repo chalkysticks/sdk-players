@@ -6,7 +6,7 @@ import { Constants } from '@chalkysticks/sdk-core';
  * @return Model.Beacon
  */
 export function model(): Model.Beacon {
-	return new Model.Beacon({
+	return new Model.Beacon(undefined, {
 		baseUrl: Constants.API_URL_V1,
 	});
 }
