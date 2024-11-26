@@ -3,21 +3,34 @@ import * as Model from '../Model';
 import { Constants } from '@chalkysticks/sdk-core';
 
 /**
+ * @param Record<string, any> options
  * @return Model.Beacon
  */
-export function model(): Model.Beacon {
-	return new Model.Beacon(undefined, {
-		baseUrl: Constants.API_URL_V1,
-	});
+export function model(options: Record<string, any> = {}): Model.Beacon {
+	return new Model.Beacon(
+		undefined,
+		Object.assign(
+			{
+				baseUrl: Constants.API_URL_V1,
+			},
+			options,
+		),
+	);
 }
 
 /**
+ * @param Record<string, any> options
  * @return Collection.Beacon
  */
-export function collection(): Collection.Beacon {
-	const collection = new Collection.Beacon({
-		baseUrl: Constants.API_URL_V1,
-	});
+export function collection(options: Record<string, any> = {}): Collection.Beacon {
+	const collection = new Collection.Beacon(
+		Object.assign(
+			{
+				baseUrl: Constants.API_URL_V1,
+			},
+			options,
+		),
+	);
 
 	return collection;
 }
